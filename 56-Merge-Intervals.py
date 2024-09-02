@@ -1,9 +1,9 @@
 class Solution(object):
     def merge(self, intervals):
-        \\\
+        """
         :type intervals: List[List[int]]
         :rtype: List[List[int]]
-        \\\
+        """
         intervals.sort(key= lambda i:i[0])
         res=[intervals[0]]
 
