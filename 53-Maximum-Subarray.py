@@ -4,12 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        res = nums[0]
-
-        total = 0
+        curSum=0
+        maxSum=nums[0]
         for n in nums:
-            total += n
-            res = max(res, total)
-            if total < 0:
-                total = 0
-        return res
+            curSum=max(n,curSum+n)
+            maxSum=max(maxSum, curSum)
+        return maxSum
