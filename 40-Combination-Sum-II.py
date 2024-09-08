@@ -7,12 +7,12 @@ class Solution(object):
         """
         res=[]
         comb=[]
-        candidates=sorted(candidates)
+        candidates.sort()
         def helper(i):
             if sum(comb)==target:
                 res.append(list(comb))
                 return
-            elif i>len(candidates)-1 or sum(comb)>target:
+            if i == len(candidates) or sum(comb)>target:
                 return
             
             comb.append(candidates[i])
