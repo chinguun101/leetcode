@@ -4,6 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        return sum(i for i in range(len(nums)+1))-sum(nums)
+        res = len(nums)
+        for i in range(len(nums)):
+            res ^= i ^ nums[i]
+        return res
 
         
